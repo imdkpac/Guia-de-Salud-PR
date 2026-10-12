@@ -9,14 +9,16 @@ import Costs from '@/sections/Costs'
 import Checklist from '@/sections/Checklist'
 import Services from '@/sections/Services'
 import Sequia from '@/sections/Sequia'
+import Top100 from '@/sections/Top100'
 import { Button } from '@/components/ui/button'
 import { HeartPulse, Languages, ArrowLeft } from 'lucide-react'
 
-export type SectionId = 'inicio' | 'sequia' | 'guias' | 'hospitales' | 'hogares' | 'medicamentos' | 'costos' | 'preparacion' | 'servicios'
+export type SectionId = 'inicio' | 'sequia' | 'top100' | 'guias' | 'hospitales' | 'hogares' | 'medicamentos' | 'costos' | 'preparacion' | 'servicios'
 
 const navItems: { id: SectionId; label: { es: string; en: string } }[] = [
   { id: 'inicio', label: bi('Inicio', 'Home') },
   { id: 'sequia', label: bi('Sequía', 'Drought') },
+  { id: 'top100', label: bi('Top 100', 'Top 100') },
   { id: 'guias', label: bi('Guías', 'Guides') },
   { id: 'hospitales', label: bi('Hospitales', 'Hospitals') },
   { id: 'hogares', label: bi('Hogares', 'Nursing homes') },
@@ -108,6 +110,7 @@ function Shell() {
         {section === 'preparacion' && <Checklist />}
         {section === 'servicios' && <Services />}
         {section === 'sequia' && <Sequia />}
+        {section === 'top100' && <Top100 />}
       </main>
 
       <footer className="border-t bg-white no-print">

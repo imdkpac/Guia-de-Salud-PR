@@ -2,7 +2,7 @@ import { useT } from '@/lib/i18n'
 import { bi } from '@/lib/i18n'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { BookOpen, Hospital, Pill, Wallet, ClipboardCheck, ArrowRight, Phone, Stethoscope, Home as HomeIcon } from 'lucide-react'
+import { BookOpen, Hospital, Pill, Wallet, ClipboardCheck, ArrowRight, Phone, Stethoscope, Home as HomeIcon, Activity } from 'lucide-react'
 import type { SectionId } from '@/App'
 
 const cards: {
@@ -45,6 +45,15 @@ const cards: {
     desc: bi(
       'Crea, guarda e imprime tu lista de medicamentos y alergias para llevar a cada cita.',
       'Create, save and print your medication and allergy list to bring to every visit.'
+    ),
+  },
+  {
+    id: 'top100',
+    icon: Activity,
+    title: bi('Top 100 enfermedades comunes', 'Top 100 common diseases'),
+    desc: bi(
+      '100 diagnósticos con sus tratamientos rankeados, signos de alarma y base de evidencia.',
+      '100 diagnoses with ranked treatments, red flags, and evidence base.'
     ),
   },
   {
