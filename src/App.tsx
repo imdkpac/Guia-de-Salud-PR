@@ -11,7 +11,7 @@ import Services from '@/sections/Services'
 import Sequia from '@/sections/Sequia'
 import Top100 from '@/sections/Top100'
 import { Button } from '@/components/ui/button'
-import { HeartPulse, Languages, ArrowLeft } from 'lucide-react'
+import { Languages, ArrowLeft } from 'lucide-react'
 
 export type SectionId = 'inicio' | 'sequia' | 'top100' | 'guias' | 'hospitales' | 'hogares' | 'medicamentos' | 'costos' | 'preparacion' | 'servicios'
 
@@ -43,9 +43,7 @@ function Shell() {
       <header className="sticky top-0 z-20 border-b bg-white/90 backdrop-blur no-print">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-3">
           <button onClick={() => go('inicio')} className="flex items-center gap-2 font-bold text-slate-900">
-            <span className="rounded-lg bg-teal-600 p-1.5 text-white">
-              <HeartPulse className="h-5 w-5" />
-            </span>
+            <img src="/images/logo2sinbackground.png" alt="" className="h-8 w-8" />
             <span className="hidden sm:inline">{t(bi('Guía de Salud PR', 'PR Health Guide'))}</span>
           </button>
           <nav className="ml-auto hidden md:flex items-center gap-1">
